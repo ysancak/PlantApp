@@ -1,8 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text } from 'react-native';
-import { FontFamily, FontSize } from '@app/utils/values';
-import Icons from '@app/utils/icons';
-import Colors from '@app/utils/colors';
+import { FontFamily, FontSize, Colors, Icons } from './utils';
 
 function App() {
   return (

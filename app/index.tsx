@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text } from 'react-native';
-import { FontFamily, FontSize } from './utils/values';
+import { FontFamily, FontSize } from '@app/utils/values';
 
 function App() {
   return (

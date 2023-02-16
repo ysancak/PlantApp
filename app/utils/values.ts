@@ -14,6 +14,7 @@ enum FontSize {
     small4 = 13,
     button = 15,
     body = 16,
+    smallTitle = 17,
     title = 20,
     title2 = 28,
 }

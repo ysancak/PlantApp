@@ -2,6 +2,7 @@ enum FontFamily {
     light = 'Rubik-Light',
     regular = 'Rubik-Regular',
     medium = 'Rubik-Medium',
+    bold = 'Rubik-Bold',
     semiBold = 'Rubik-SemiBold',
     extraBold = 'Rubik-ExtraBold'
 }

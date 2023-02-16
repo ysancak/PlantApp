@@ -2,10 +2,10 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text } from 'react-native';
 import { FontFamily, FontSize, Colors, Icons } from './utils';
 
-import GetStartedScreen from './screens/get-started';
+import OnboardingScreen from './screens/onboarding';
 
 function App() {
-  return <GetStartedScreen />;
+  return <OnboardingScreen />;
 }
 
 const styles = StyleSheet.create({

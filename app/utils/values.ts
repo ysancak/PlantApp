@@ -1,5 +1,6 @@
 enum FontFamily {
     regular = 'Rubik-Regular',
+    medium = 'Rubik-Medium',
     semiBold = 'Rubik-SemiBold',
     extraBold = 'Rubik-ExtraBold'
 }

@@ -15,7 +15,14 @@ enum FontSize {
     title2 = 28,
 }
 
+enum BorderRadius {
+    small = 8,
+    medium = 12,
+    large = 14
+}
+
 export {
     FontFamily,
-    FontSize
+    FontSize,
+    BorderRadius
 }

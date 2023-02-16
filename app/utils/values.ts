@@ -21,8 +21,13 @@ enum BorderRadius {
     large = 14
 }
 
+enum Padding {
+    container = 24
+}
+
 export {
     FontFamily,
     FontSize,
-    BorderRadius
+    BorderRadius,
+    Padding
 }

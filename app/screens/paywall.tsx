@@ -101,6 +101,9 @@ const PaywallScreen: React.FC<Props> = ({}) => {
             <Paragraph size={FontSize.small2} color={Colors.white} opacity={0.52} align="center">
               After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable
             </Paragraph>
+            <Paragraph weight={FontFamily.medium} size={FontSize.small2} color={Colors.white} opacity={0.52} align="center">
+              Terms • Privacy • Restore
+            </Paragraph>
           </View>
         </SafeAreaView>
       </LinearGradient>

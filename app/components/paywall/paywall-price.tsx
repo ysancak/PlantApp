@@ -1,11 +1,10 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 
-import Title from '../title';
-import Paragraph from '../paragraph';
 import { FontFamily, FontSize, Colors } from '@app/utils';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import Typography from '../typography';
 
 // Active
 export type ActiveProps = {
@@ -21,18 +20,18 @@ const ActivePrice: React.FC<ActiveProps> = ({ period, description, badge }) => {
       </View>
       {badge && (
         <View style={styles.badgeContainer}>
-          <Title color={Colors.white} size={FontSize.small4} weight={FontFamily.medium}>
+          <Typography color={Colors.white} size={FontSize.small4} weight={FontFamily.medium}>
             {badge}
-          </Title>
+          </Typography>
         </View>
       )}
       <View style={{ gap: 4 }}>
-        <Title color={Colors.white} size={FontSize.body} weight={FontFamily.medium}>
+        <Typography color={Colors.white} size={FontSize.body} weight={FontFamily.medium}>
           {period}
-        </Title>
-        <Paragraph color={Colors.white} opacity={0.7} size={FontSize.small4}>
+        </Typography>
+        <Typography color={Colors.white} opacity={0.7} size={FontSize.small4}>
           {description}
-        </Paragraph>
+        </Typography>
       </View>
     </LinearGradient>
   );
@@ -50,18 +49,18 @@ const DeactivePrice: React.FC<DeactiveProps> = ({ period, description, badge }) 
       <View style={{ width: 24, height: 24, borderRadius: 24, backgroundColor: Colors.white, opacity: 0.15 }} />
       {badge && (
         <View style={styles.badgeContainer}>
-          <Title color={Colors.white} size={FontSize.small4} weight={FontFamily.medium}>
+          <Typography color={Colors.white} size={FontSize.small4} weight={FontFamily.medium}>
             {badge}
-          </Title>
+          </Typography>
         </View>
       )}
       <View style={{ gap: 4 }}>
-        <Title color={Colors.white} size={FontSize.body} weight={FontFamily.medium}>
+        <Typography color={Colors.white} size={FontSize.body} weight={FontFamily.medium}>
           {period}
-        </Title>
-        <Paragraph color={Colors.white} opacity={0.7} size={FontSize.small4}>
+        </Typography>
+        <Typography color={Colors.white} opacity={0.7} size={FontSize.small4}>
           {description}
-        </Paragraph>
+        </Typography>
       </View>
     </View>
   );

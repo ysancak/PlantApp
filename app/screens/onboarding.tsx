@@ -5,20 +5,17 @@ import Carousel from 'react-native-reanimated-carousel';
 
 import { Colors, Padding } from '@app/utils';
 import Button from '@app/components/button';
-
 import Slider1 from '@app/components/onboarding-sliders/slider-1';
 import Slider2 from '@app/components/onboarding-sliders/slider-2';
 
 const bgImage = require('@app/assets/images/onboarding/bg.png');
 const windowWidth = Dimensions.get('window').width;
-
 const sliderData = [<Slider1 />, <Slider2 />];
 
 export type Props = {};
 
 const OnboardingScreen: React.FC<Props> = ({}) => {
   const [activeSlider, setActiveSlider] = useState<number>(0);
-
   return (
     <ImageBackground source={bgImage} resizeMode="cover" style={{ flex: 1 }}>
       <SafeAreaView style={styles.container}>

@@ -1,7 +1,8 @@
-import Title from '@app/components/title';
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+
 import { FontFamily, FontSize, Padding } from '@app/utils';
+import Typography from '../typography';
 
 export type Props = {};
 
@@ -11,15 +12,15 @@ const OnboardingSlider1: React.FC<Props> = ({}) => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Title weight={FontFamily.medium} size={FontSize.title2}>
+        <Typography weight={FontFamily.medium} size={FontSize.title2}>
           Take a photo to
-        </Title>
-        <Title weight={FontFamily.extraBold} size={FontSize.title2} underline>
+        </Typography>
+        <Typography weight={FontFamily.extraBold} size={FontSize.title2} underline>
           identify
-        </Title>
-        <Title weight={FontFamily.medium} size={FontSize.title2}>
+        </Typography>
+        <Typography weight={FontFamily.medium} size={FontSize.title2}>
           the plant!
-        </Title>
+        </Typography>
       </View>
       <View style={{ flex: 1 }}>
         <Image style={styles.mainImage} source={sliderMain} />

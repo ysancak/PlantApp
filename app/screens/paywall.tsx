@@ -3,12 +3,11 @@ import { ImageBackground, SafeAreaView, StatusBar, StyleSheet, View, Dimensions,
 import { ScrollView } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 
-import Title from '@app/components/title';
 import { Colors, FontFamily, FontSize, Icons, Padding } from '@app/utils';
 import PaywallPrice from '@app/components/paywall/paywall-price';
 import PaywallValueProposition from '@app/components/paywall/paywall-value-proposition';
 import Button from '@app/components/button';
-import Paragraph from '@app/components/paragraph';
+import Typography from '@app/components/typography';
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -33,7 +32,6 @@ const valueProps = [
     description: 'Plant care'
   }
 ];
-
 const periods = [
   {
     id: 0,
@@ -72,21 +70,21 @@ const PaywallScreen: React.FC<Props> = ({}) => {
         <SafeAreaView style={{ gap: 26 }}>
           <View style={styles.titleContainer}>
             <View style={styles.title}>
-              <Title size={FontSize.title2} weight={FontFamily.bold} color={Colors.white}>
+              <Typography size={FontSize.title2} weight={FontFamily.bold} color={Colors.white}>
                 PlantApp
-              </Title>
-              <Title size={FontSize.title2} weight={FontFamily.regular} color={Colors.white}>
+              </Typography>
+              <Typography size={FontSize.title2} weight={FontFamily.regular} color={Colors.white}>
                 Premium
-              </Title>
+              </Typography>
             </View>
-            <Title size={FontSize.smallTitle} color={Colors.white} opacity={0.7}>
+            <Typography size={FontSize.smallTitle} color={Colors.white} opacity={0.7}>
               Access All Features
-            </Title>
+            </Typography>
           </View>
 
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.valuePropScrollview}>
             {valueProps.map((item, index) => {
-              return <PaywallValueProposition icon={item.icon} title={item.title} description={item.description} />;
+              return <PaywallValueProposition key={`value-proposition-${index}`} icon={item.icon} title={item.title} description={item.description} />;
             })}
           </ScrollView>
 
@@ -98,12 +96,12 @@ const PaywallScreen: React.FC<Props> = ({}) => {
 
           <View style={styles.bottomContainer}>
             <Button>{periods[activePeriod].buttonText}</Button>
-            <Paragraph size={FontSize.small2} color={Colors.white} opacity={0.52} align="center">
+            <Typography size={FontSize.small2} color={Colors.white} opacity={0.52} align="center">
               After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable
-            </Paragraph>
-            <Paragraph weight={FontFamily.medium} size={FontSize.small2} color={Colors.white} opacity={0.52} align="center">
+            </Typography>
+            <Typography weight={FontFamily.medium} size={FontSize.small3} color={Colors.white} opacity={0.52} align="center">
               Terms • Privacy • Restore
-            </Paragraph>
+            </Typography>
           </View>
         </SafeAreaView>
       </LinearGradient>

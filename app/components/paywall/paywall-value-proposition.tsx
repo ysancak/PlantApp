@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Title from '../title';
-import { FontFamily, FontSize, Colors, Icons } from '@app/utils';
+import { FontFamily, FontSize, Colors } from '@app/utils';
+import Typography from '../typography';
 
 export type Props = {
   icon: JSX.Element;
@@ -15,12 +15,12 @@ const PaywallValueProposition: React.FC<Props> = ({ icon, title, description }) 
     <View style={styles.container}>
       <View style={styles.iconContainer}>{icon}</View>
       <View style={{ gap: 5 }}>
-        <Title size={FontSize.title} weight={FontFamily.medium} color={Colors.white}>
+        <Typography size={FontSize.title} weight={FontFamily.medium} color={Colors.white}>
           {title}
-        </Title>
-        <Title size={FontSize.button} weight={FontFamily.regular} color={Colors.white} opacity={0.7}>
+        </Typography>
+        <Typography size={FontSize.button} weight={FontFamily.regular} color={Colors.white} opacity={0.7}>
           {description}
-        </Title>
+        </Typography>
       </View>
     </View>
   );

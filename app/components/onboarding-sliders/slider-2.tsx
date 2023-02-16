@@ -1,7 +1,8 @@
-import Title from '@app/components/title';
 import React from 'react';
 import { Image, ImageBackground, StyleSheet, View } from 'react-native';
+
 import { FontFamily, FontSize, Padding } from '@app/utils';
+import Typography from '../typography';
 
 export type Props = {};
 
@@ -13,17 +14,17 @@ const OnboardingSlider2: React.FC<Props> = ({}) => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Title weight={FontFamily.medium} size={FontSize.title2}>
+        <Typography weight={FontFamily.medium} size={FontSize.title2}>
           Get plant
-        </Title>
-        <Title weight={FontFamily.extraBold} size={FontSize.title2} underline>
+        </Typography>
+        <Typography weight={FontFamily.extraBold} size={FontSize.title2} underline>
           care guides
-        </Title>
+        </Typography>
       </View>
-      <View style={{ flex: 1 }}>
-        <ImageBackground source={bgImage} style={{ flex: 1 }} resizeMode="cover">
-          <Image style={{ flex: 1, width: '100%', height: '100%', bottom: -80 }} resizeMode="contain" source={sliderMain} />
-          <Image style={{ width: 150, height: 150, position: 'absolute', top: 40, right: 20 }} resizeMode="contain" source={artwork} />
+      <View style={styles.imageContainer}>
+        <ImageBackground source={bgImage} style={styles.imageBackground} resizeMode="cover">
+          <Image style={styles.sliderMainImage} resizeMode="contain" source={sliderMain} />
+          <Image style={styles.artworkImage} resizeMode="contain" source={artwork} />
         </ImageBackground>
       </View>
     </View>
@@ -40,6 +41,28 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingTop: 20,
     paddingHorizontal: Padding.container
+  },
+  title: {
+    flex: 1
+  },
+  imageContainer: {
+    flex: 1
+  },
+  imageBackground: {
+    flex: 1
+  },
+  sliderMainImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    bottom: -80
+  },
+  artworkImage: {
+    width: 150,
+    height: 150,
+    position: 'absolute',
+    top: 40,
+    right: 20
   }
 });
 

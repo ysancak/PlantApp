@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-import { FontFamily, FontSize, Colors, Padding, BorderRadius } from '@app/utils';
+import { FontFamily, FontSize, Colors, BorderRadius } from '@app/utils';
 
 export type Props = {
   variant?: 'default';

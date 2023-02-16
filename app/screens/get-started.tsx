@@ -1,10 +1,9 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Image, ImageBackground, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, ImageBackground, View } from 'react-native';
 
 import { FontFamily, FontSize, Padding, Colors } from '@app/utils';
-import Title from '@app/components/title';
-import Paragraph from '@app/components/paragraph';
 import Button from '@app/components/button';
+import Typography from '@app/components/typography';
 
 export type Props = {};
 
@@ -17,14 +16,14 @@ const GetStartedScreen: React.FC<Props> = ({}) => {
       <SafeAreaView style={styles.container}>
         <View style={styles.valueProp}>
           <View style={styles.title}>
-            <Title size={FontSize.title2}>Welcome to</Title>
-            <Title weight={FontFamily.semiBold} size={FontSize.title2}>
+            <Typography size={FontSize.title2}>Welcome to</Typography>
+            <Typography weight={FontFamily.semiBold} size={FontSize.title2}>
               PlantApp
-            </Title>
+            </Typography>
           </View>
-          <Paragraph color={Colors.mainDark} opacity={0.7}>
+          <Typography color={Colors.mainDark} opacity={0.7}>
             Identify more than 3000+ plants and 88% accuracy.
-          </Paragraph>
+          </Typography>
         </View>
 
         {/* Plant Image */}
@@ -33,9 +32,9 @@ const GetStartedScreen: React.FC<Props> = ({}) => {
         <View style={styles.actionContainer}>
           <Button>Get Started</Button>
           <View style={{ paddingHorizontal: 25 }}>
-            <Paragraph color={Colors.secondary} opacity={0.7} size={FontSize.small4} align="center">
+            <Typography color={Colors.secondary} opacity={0.7} size={FontSize.small4} align="center">
               By tapping next, you are agreeing to PlantID Terms of Use & Privacy Policy.
-            </Paragraph>
+            </Typography>
           </View>
         </View>
       </SafeAreaView>

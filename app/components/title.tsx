@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { FontFamily, FontSize } from '@app/utils';
 
 export type Props = {
-  weight?: FontFamily.regular | FontFamily.medium | FontFamily.semiBold | FontFamily.extraBold;
+  weight?: FontFamily.light | FontFamily.regular | FontFamily.medium | FontFamily.semiBold | FontFamily.extraBold;
   size?: FontSize.title | FontSize.title2;
   underline?: boolean;
   children: string;

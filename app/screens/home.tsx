@@ -4,7 +4,7 @@ import { BlurView } from '@react-native-community/blur';
 
 import Typography from '@app/components/typography';
 import FeedPremium from '@app/components/feed/premium';
-import FeedQuestions from '@app/components/feed/questions';
+import FeedQuestions from '@app/components/feed/questions/list';
 import FeedCategories from '@app/components/feed/categories/list';
 import { Colors, FontFamily, FontSize, Icons, Padding } from '@app/utils';
 

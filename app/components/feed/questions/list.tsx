@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, ImageBackground } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 
-import { FontFamily, FontSize, Colors, Padding } from '@app/utils';
+import { FontFamily, FontSize, Padding } from '@app/utils';
 import Typography from '@app/components/typography';
+import FeedQuestionsItem from './item';
+import FeedQuestionsLoading from '@app/components/loading/feed/questions';
 
 const questions = [
   {
@@ -42,17 +44,10 @@ const FeedQuestions: React.FC<Props> = ({}) => {
         </Typography>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContentContainer}>
-        {questions.map((item, index) => {
-          return (
-            <ImageBackground key={`category-${index}`} source={{ uri: item.image_uri }} style={styles.imageContainer} imageStyle={styles.imageStyle}>
-              <View style={styles.questionContainer}>
-                <Typography size={FontSize.body} weight={FontFamily.medium} color={Colors.white}>
-                  {item.title}
-                </Typography>
-              </View>
-            </ImageBackground>
-          );
-        })}
+        {/*{questions.map((item, index) => {
+          return <FeedQuestionsItem key={`feed-questions-${index}`} image={item.image_uri} name={item.title} />;
+        })}*/}
+        <FeedQuestionsLoading />
       </ScrollView>
     </View>
   );
@@ -68,21 +63,6 @@ const styles = StyleSheet.create({
   scrollViewContentContainer: {
     paddingHorizontal: Padding.container,
     gap: 10
-  },
-  imageContainer: {
-    width: 240,
-    height: 164
-  },
-  imageStyle: {
-    borderRadius: 12
-  },
-  questionContainer: {
-    position: 'absolute',
-    width: '100%',
-    height: 60,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    bottom: 0
   }
 });
 

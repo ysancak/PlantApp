@@ -3,8 +3,8 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
 
-import { FontFamily, FontSize, Colors, Icons } from '@app/utils';
-import Typography from './typography';
+import { FontFamily, FontSize, Padding, Colors, Icons } from '@app/utils';
+import Typography from '@app/components/typography';
 
 export type Props = {};
 
@@ -37,6 +37,7 @@ const FeedPremium: React.FC<Props> = ({}) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginHorizontal: Padding.container,
     backgroundColor: Colors.brown,
     flexDirection: 'row',
     alignItems: 'center',

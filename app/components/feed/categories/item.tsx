@@ -1,24 +1,26 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions, Image } from 'react-native';
+import { View, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import { FontFamily, Colors, Padding } from '@app/utils';
 import Typography from '@app/components/typography';
 
+const windowWidth = Dimensions.get('window').width;
 export type Props = {
   name: string;
   image: string;
 };
-const windowWidth = Dimensions.get('window').width;
 
 const FeedCategoriesItem: React.FC<Props> = ({ name, image }) => {
   return (
-    <LinearGradient colors={['#FFFFFF', '#F9FFFA']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.container}>
-      <View style={styles.titleContainer}>
-        <Typography weight={FontFamily.medium}>{name}</Typography>
-      </View>
-      <Image source={{ uri: image }} style={styles.image} />
-    </LinearGradient>
+    <TouchableOpacity activeOpacity={0.8}>
+      <LinearGradient colors={['#FFFFFF', '#F9FFFA']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Typography weight={FontFamily.medium}>{name}</Typography>
+        </View>
+        <Image source={{ uri: image }} style={styles.image} />
+      </LinearGradient>
+    </TouchableOpacity>
   );
 };
 

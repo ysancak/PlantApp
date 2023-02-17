@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
   },
   scrollViewContentContainer: {
     paddingTop: 20,
+    paddingBottom: 40,
     gap: 26
   }
 });

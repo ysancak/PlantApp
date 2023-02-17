@@ -2,9 +2,9 @@ import React from 'react';
 import { View, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 
 import { FontFamily, FontSize, Colors, Padding } from '@app/utils';
-import Typography from './typography';
+import Typography from '@app/components/typography';
 
-const categories = [
+const questions = [
   {
     id: 1,
     title: 'How to identify plants?',
@@ -42,7 +42,7 @@ const FeedQuestions: React.FC<Props> = ({}) => {
         </Typography>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContentContainer}>
-        {categories.map((item, index) => {
+        {questions.map((item, index) => {
           return (
             <ImageBackground key={`category-${index}`} source={{ uri: item.image_uri }} style={styles.imageContainer} imageStyle={styles.imageStyle}>
               <View style={styles.questionContainer}>

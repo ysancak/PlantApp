@@ -3,9 +3,10 @@ import { ImageBackground, SafeAreaView, ScrollView, StyleSheet, TextInput, View 
 import { BlurView } from '@react-native-community/blur';
 
 import Typography from '@app/components/typography';
+import FeedPremium from '@app/components/feed/premium';
+import FeedQuestions from '@app/components/feed/questions';
+import FeedCategories from '@app/components/feed/categories/list';
 import { Colors, FontFamily, FontSize, Icons, Padding } from '@app/utils';
-import FeedPremium from '@app/components/feed-premium';
-import FeedQuestions from '@app/components/feed-questions';
 
 const headerBgImage = require('@app/assets/images/general/header-bg-1.png');
 
@@ -16,10 +17,12 @@ const HomeScreen: React.FC<Props> = ({}) => {
     <View style={styles.container}>
       <ImageBackground source={headerBgImage} style={styles.imageBg}>
         <SafeAreaView style={styles.headerContainer}>
-          <Typography size={FontSize.body}>Hi, plant lover!</Typography>
-          <Typography size={FontSize.titleAlternative} weight={FontFamily.medium}>
-            Good Afternoon! ⛅
-          </Typography>
+          <View style={{ marginTop: 10, gap: 4 }}>
+            <Typography size={FontSize.body}>Hi, plant lover!</Typography>
+            <Typography size={FontSize.titleAlternative} weight={FontFamily.medium}>
+              Good Afternoon! ⛅
+            </Typography>
+          </View>
 
           <BlurView blurType="light" blurAmount={1} style={styles.searchInputContainer}>
             <Icons.Search width={24} height={24} fill="red" />
@@ -28,13 +31,10 @@ const HomeScreen: React.FC<Props> = ({}) => {
         </SafeAreaView>
       </ImageBackground>
 
-      <ScrollView contentContainerStyle={{ paddingTop: 20, gap: 26 }}>
-        <View style={{ paddingHorizontal: Padding.container }}>
-          <FeedPremium />
-        </View>
-        <View>
-          <FeedQuestions />
-        </View>
+      <ScrollView contentContainerStyle={styles.scrollViewContentContainer}>
+        <FeedPremium />
+        <FeedQuestions />
+        <FeedCategories />
       </ScrollView>
     </View>
   );
@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginHorizontal: Padding.container,
     gap: 4,
-    marginBottom: 16,
-    marginTop: 60
+    marginBottom: 16
   },
   imageBg: {
     borderBottomWidth: 1,
@@ -72,6 +71,10 @@ const styles = StyleSheet.create({
     height: 42,
     fontSize: FontSize.smallTitle,
     fontFamily: FontFamily.regular
+  },
+  scrollViewContentContainer: {
+    paddingTop: 20,
+    gap: 26
   }
 });
 

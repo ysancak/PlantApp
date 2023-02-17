@@ -17,11 +17,9 @@ const FeedCategoriesLoading: React.FC<Props> = ({}) => {
       data={[1, 2, 3, 4, 5, 6]}
       maxItemsPerRow={2}
       renderItem={() => (
-        <View style={styles.item}>
-          <SkeletonPlaceholder>
-            <SkeletonPlaceholder.Item height={windowWidth / 2 - Padding.container * 2} borderRadius={12} />
-          </SkeletonPlaceholder>
-        </View>
+        <SkeletonPlaceholder>
+          <SkeletonPlaceholder.Item width={windowWidth / 2 - Padding.container - 5} height={windowWidth / 2 - Padding.container * 2} borderRadius={12} />
+        </SkeletonPlaceholder>
       )}
     />
   );
@@ -31,13 +29,6 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: Padding.container - 10,
     marginVertical: -10
-  },
-  item: {
-    backgroundColor: '#FFF',
-    borderWidth: 1,
-    borderColor: Colors.stroke + 10,
-    borderRadius: 12,
-    height: windowWidth / 2 - Padding.container * 2
   }
 });
 

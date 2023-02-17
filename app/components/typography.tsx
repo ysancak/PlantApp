@@ -13,7 +13,7 @@ export type Props = {
   children: string;
 };
 
-const Typography: React.FC<Props> = ({ weight = FontFamily.regular, size = FontSize.body, color = Colors.black, align = 'left', opacity = 1, underline = false, children }) => {
+const Typography: React.FC<Props> = ({ weight = FontFamily.regular, size = FontSize.body, color = Colors.mainDark, align = 'left', opacity = 1, underline = false, children }) => {
   if (underline) {
     return (
       <View>

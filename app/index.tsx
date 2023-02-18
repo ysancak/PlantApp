@@ -1,10 +1,9 @@
 import React from 'react';
 
-import GetStartedScreen from './screens/get-started';
-import OnboardingScreen from './screens/onboarding';
+import StackNavigation from '@app/navigation/stack';
 
 function App() {
-  return <OnboardingScreen />;
+  return <StackNavigation />;
 }
 
 export default App;

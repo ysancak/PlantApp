@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ImageBackground, SafeAreaView, StatusBar, StyleSheet, View, Dimensions, TouchableOpacity } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -49,9 +50,11 @@ const periods = [
   }
 ];
 
-export type Props = {};
+export type Props = {
+  navigation: NavigationProp<any, any>;
+};
 
-const PaywallScreen: React.FC<Props> = ({}) => {
+const PaywallScreen: React.FC<Props> = ({ navigation }) => {
   const [activePeriod, setActivePeriod] = useState<number>(0);
 
   return (
@@ -60,7 +63,7 @@ const PaywallScreen: React.FC<Props> = ({}) => {
 
       <ImageBackground source={bgImage} style={styles.imageBg}>
         <SafeAreaView>
-          <TouchableOpacity style={styles.closeButtonContainer} activeOpacity={0.8}>
+          <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('Home')} style={styles.closeButtonContainer}>
             <Icons.Close width={12} height={12} fill={'#FFFFFF'} />
           </TouchableOpacity>
         </SafeAreaView>

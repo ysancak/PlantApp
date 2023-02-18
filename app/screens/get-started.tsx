@@ -1,16 +1,19 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Image, ImageBackground, View } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
 
 import { FontFamily, FontSize, Padding, Colors } from '@app/utils';
 import Button from '@app/components/button';
 import Typography from '@app/components/typography';
 
-export type Props = {};
+export type Props = {
+  navigation: NavigationProp<any, any>;
+};
 
 const bgImage = require('@app/assets/images/get-started/bg.png');
 const plantImage = require('@app/assets/images/get-started/plant.png');
 
-const GetStartedScreen: React.FC<Props> = ({}) => {
+const GetStartedScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <ImageBackground source={bgImage} resizeMode="cover" style={{ flex: 1 }}>
       <SafeAreaView style={styles.container}>
@@ -30,7 +33,7 @@ const GetStartedScreen: React.FC<Props> = ({}) => {
         <Image style={styles.plantImage} source={plantImage} />
 
         <View style={styles.actionContainer}>
-          <Button>Get Started</Button>
+          <Button onPress={() => navigation.navigate('Onboarding')}>Get Started</Button>
           <View style={{ paddingHorizontal: 25 }}>
             <Typography color={Colors.secondary} opacity={0.7} size={FontSize.small4} align="center">
               By tapping next, you are agreeing to PlantID Terms of Use & Privacy Policy.

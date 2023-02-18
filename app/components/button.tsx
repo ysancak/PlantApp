@@ -6,15 +6,16 @@ import { FontFamily, FontSize, Colors, BorderRadius } from '@app/utils';
 export type Props = {
   variant?: 'default';
   children: string;
+  onPress?: () => void;
 };
 
-const Button: React.FC<Props> = ({ variant = 'default', children }) => {
+const Button: React.FC<Props> = ({ variant = 'default', children, onPress }) => {
   const additionalStyles = {
     backgroundColor: Colors.main,
     color: Colors.white
   };
   return (
-    <TouchableOpacity activeOpacity={0.8} style={{ ...styles.container, backgroundColor: additionalStyles.backgroundColor }}>
+    <TouchableOpacity activeOpacity={0.8} onPress={onPress} style={{ ...styles.container, backgroundColor: additionalStyles.backgroundColor }}>
       <Text style={{ ...styles.text, color: additionalStyles.color }}>{children}</Text>
     </TouchableOpacity>
   );

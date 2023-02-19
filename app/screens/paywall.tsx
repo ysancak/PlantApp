@@ -63,7 +63,7 @@ const PaywallScreen: React.FC<Props> = ({ navigation }) => {
 
       <ImageBackground source={bgImage} style={styles.imageBg}>
         <SafeAreaView>
-          <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('Home')} style={styles.closeButtonContainer}>
+          <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('Tabbar')} style={styles.closeButtonContainer}>
             <Icons.Close width={12} height={12} fill={'#FFFFFF'} />
           </TouchableOpacity>
         </SafeAreaView>

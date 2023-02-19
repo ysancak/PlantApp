@@ -25,7 +25,7 @@ function StackNavigation() {
         <Stack.Screen name="GetStarted" component={GetStartedScreen} />
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
         <Stack.Screen name="Paywall" component={PaywallScreen} />
-        <Stack.Screen name="Home" component={TabNavigation} />
+        <Stack.Screen name="Tabbar" component={TabNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

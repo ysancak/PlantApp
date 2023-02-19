@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import { SimpleGrid } from 'react-native-super-grid';
 
-import { Colors, Padding } from '@app/utils';
+import { Padding } from '@app/utils';
 
 export type Props = {};
 const windowWidth = Dimensions.get('window').width;

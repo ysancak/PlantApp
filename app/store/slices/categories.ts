@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCategories } from '@app/services/api';
 
 interface ICategoryImage {
     id: number;

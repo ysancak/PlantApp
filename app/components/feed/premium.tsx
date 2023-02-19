@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -12,7 +12,7 @@ const FeedPremium: React.FC<Props> = ({}) => {
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.container}>
       <View style={styles.contentContainer}>
-        <Icons.PremiumMessage width={56} height={56} style={{ marginTop: 2 }} />
+        <Icons.PremiumMessage width={56} height={56} style={styles.icon} />
         <View style={{ flex: 1 }}>
           <MaskedView
             style={{ height: 24 }}
@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
     gap: 8,
     alignItems: 'center',
     flex: 1
+  },
+  icon: {
+    marginTop: 2
   }
 });
 

@@ -9,6 +9,7 @@ import FeedQuestionsLoading from '@app/components/loading/feed/questions';
 import { getQuestions } from '@app/services/api';
 import { useSelector } from 'react-redux';
 import { IQuestion } from '@app/store/slices/questions';
+import { dispatchQuestions } from '@app/store/dispatch';
 
 export type Props = {};
 
@@ -17,12 +18,17 @@ const FeedQuestions: React.FC<Props> = ({}) => {
   const [questions, setQuestions] = useState<IQuestion[] | []>([]);
 
   useEffect(() => {
-    getQuestions();
+    getData();
   }, []);
 
   useEffect(() => {
     setQuestions(state.questions.questions);
   }, [state.questions]);
+
+  const getData = async () => {
+    const result = await getQuestions();
+    dispatchQuestions(result);
+  };
 
   return (
     <View style={styles.container}>

@@ -9,6 +9,7 @@ import FeedCategoriesLoading from '@app/components/loading/feed/categories';
 import { getCategories } from '@app/services/api';
 import { useSelector } from 'react-redux';
 import { ICategory } from '@app/store/slices/categories';
+import { dispatchCategories } from '@app/store/dispatch';
 
 export type Props = {};
 
@@ -17,12 +18,17 @@ const FeedCategories: React.FC<Props> = ({}) => {
   const [categories, setCategories] = useState<ICategory[] | []>([]);
 
   useEffect(() => {
-    getCategories();
+    getData();
   }, []);
 
   useEffect(() => {
     setCategories(state.categories.categories);
   }, [state.categories]);
+
+  const getData = async () => {
+    const result = await getCategories();
+    dispatchCategories(result);
+  };
 
   if (categories.length > 0) {
     return <SimpleGrid listKey={'id'} spacing={10} style={styles.container} data={categories} maxItemsPerRow={2} renderItem={({ item }) => <FeedCategoriesItem name={item.title} image={item.image.url} />} />;

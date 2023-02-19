@@ -6,10 +6,18 @@ const instance = axios.create({
     timeout: 1000,
     headers: {'X-Custom-Header': 'foobar'}
 });
+ 
+instance.interceptors.response.use(async (response) => {
+  // Delay for Testing
+  await new Promise((resolve) => setTimeout(resolve, 1000))
+  return response
+});
 
 export const getCategories = async () => {
     try {
-        await instance.get('/getCategories').then(response => dispatchCategories(response.data.data))
+        setTimeout(async () => {
+            await instance.get('/getCategories').then(response => dispatchCategories(response.data.data))
+        }, 1000);
     } catch (error) {
         return console.error(error);
     }

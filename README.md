@@ -2,7 +2,7 @@
 
 ![Screenshots were taken from the emulator after the project was finished](https://raw.githubusercontent.com/ysancak/PlantApp/main/thumbnail.jpg?token=GHSAT0AAAAAAB6255O6RIK3U46J7S6WTXNIY7SLNMA 'Screenshots were taken from the emulator after the project was finished')
 
-<p style="font-size: 10px; margin-bottom: 20px; text-align: center">Screenshots were taken from the emulator after the project was finished<p>
+_Screenshots were taken from the emulator after the project was finished_
 
 This project was completed as an interview case study for HubX company. The total time spent on this project was 30 working hours.
 

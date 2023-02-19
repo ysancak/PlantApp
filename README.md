@@ -1,6 +1,6 @@
 # Plant App: React Native Interview Case
 
-![Screenshots were taken from the emulator after the project was finished](https://raw.githubusercontent.com/ysancak/PlantApp/main/thumbnail.jpg?token=GHSAT0AAAAAAB6255O6RIK3U46J7S6WTXNIY7SLNMA 'Screenshots were taken from the emulator after the project was finished')
+![Screenshots were taken from the emulator after the project was finished](https://raw.githubusercontent.com/ysancak/PlantApp/main/thumbnail.jpghttps://raw.githubusercontent.com/ysancak/PlantApp/main/thumbnail.jpg 'Screenshots were taken from the emulator after the project was finished')
 
 _Screenshots were taken from the emulator after the project was finished_
 

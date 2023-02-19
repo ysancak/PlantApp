@@ -37,7 +37,7 @@ The Plant App has the following features:
 - Unit test
 - TypeScript and Redux
 
-## Animations and Improvements
+## Improvements
 
 In this project may be some areas where animations and other improvements could be made. Additionally, due to time constraints, there may be some bugs or error messages that I did not have time to address
 

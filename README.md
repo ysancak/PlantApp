@@ -18,6 +18,9 @@ Then, navigate to the project directory and install the dependencies using yarn:
 
 `yarn`
 
+`cd ios && pod install`
+
+
 ## Running the App
 
 To run the app, make sure you have an emulator set up or a physical device connected. Then, run the following command:

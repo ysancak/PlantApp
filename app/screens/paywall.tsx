@@ -9,6 +9,7 @@ import PaywallPrice from '@app/components/paywall/paywall-price';
 import PaywallValueProposition from '@app/components/paywall/paywall-value-proposition';
 import Button from '@app/components/button';
 import Typography from '@app/components/typography';
+import { dispatchCompleteBoarding } from '@app/store/dispatch';
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -57,13 +58,18 @@ export type Props = {
 const PaywallScreen: React.FC<Props> = ({ navigation }) => {
   const [activePeriod, setActivePeriod] = useState<number>(0);
 
+  const saveAndCountinue = () => {
+    dispatchCompleteBoarding();
+    navigation.navigate('Tabbar');
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle={'light-content'} />
 
       <ImageBackground source={bgImage} style={styles.imageBg}>
         <SafeAreaView>
-          <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('Tabbar')} style={styles.closeButtonContainer}>
+          <TouchableOpacity activeOpacity={0.8} onPress={saveAndCountinue} style={styles.closeButtonContainer}>
             <Icons.Close width={12} height={12} fill={'#FFFFFF'} />
           </TouchableOpacity>
         </SafeAreaView>

@@ -2,6 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { useSelector } from 'react-redux';
+
 // Screens
 import GetStartedScreen from '@app/screens/get-started';
 import OnboardingScreen from '@app/screens/onboarding';
@@ -19,9 +21,11 @@ const screenOptions: IScreenOptions = {
 const Stack = createNativeStackNavigator();
 
 function StackNavigation() {
+  const state = useSelector(state => state);
+  const onBoardingComplete: boolean = state.core.onBoardingComplete;
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+      <Stack.Navigator initialRouteName={onBoardingComplete ? 'Tabbar' : 'GetStarted'} screenOptions={screenOptions}>
         <Stack.Screen name="GetStarted" component={GetStartedScreen} />
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
         <Stack.Screen name="Paywall" component={PaywallScreen} />

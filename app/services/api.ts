@@ -15,9 +15,7 @@ instance.interceptors.response.use(async (response) => {
 
 export const getCategories = async () => {
     try {
-        setTimeout(async () => {
-            await instance.get('/getCategories').then(response => dispatchCategories(response.data.data))
-        }, 1000);
+        await instance.get('/getCategories').then(response => dispatchCategories(response.data.data))
     } catch (error) {
         return console.error(error);
     }

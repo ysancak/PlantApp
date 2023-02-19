@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface ICategoryImage {
+export interface ICategoryImage {
     id: number;
     name: string;
     alternativeText: null | string;

@@ -7,17 +7,17 @@ const instance = axios.create({
     headers: {'X-Custom-Header': 'foobar'}
 });
 
-export const getCategories = () => async () => {
+export const getCategories = async () => {
     try {
-        await instance.get('/getCategories').then(response => dispatchCategories(response.data))
+        await instance.get('/getCategories').then(response => dispatchCategories(response.data.data))
     } catch (error) {
         return console.error(error);
     }
 }
 
-export const getQuestions = () => async () => {
+export const getQuestions = async () => {
     try {
-        await instance.get('/getQuestions').then(response => dispatchQuestions(response.data))
+       await instance.get('/getQuestions').then(response => dispatchQuestions(response.data))
     } catch (error) {
         return console.error(error);
     }

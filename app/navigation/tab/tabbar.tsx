@@ -39,7 +39,7 @@ const Tabbar: React.FC<Props> = ({ state, descriptors, navigation }) => {
 
           if (label == 'Scan') {
             return (
-              <TabbarButton onPress={onPress}>
+              <TabbarButton key={`tabbar-item-${index}`} onPress={onPress}>
                 <LinearGradient colors={[Colors.main, '#2CCC80']} start={{ x: 0, y: 0 }} end={{ x: 0.6, y: 1 }} style={styles.scanTabbarButton}>
                   <Icons.Scanner width={22} height={22} fill={Colors.white} />
                 </LinearGradient>
@@ -66,7 +66,7 @@ const Tabbar: React.FC<Props> = ({ state, descriptors, navigation }) => {
           }
 
           return (
-            <TabbarButton onPress={onPress} isFocused={isFocused}>
+            <TabbarButton key={`tabbar-item-${index}`} onPress={onPress} isFocused={isFocused}>
               <>
                 {icon}
                 <Text style={{ ...styles.tabbarButton, color: isFocused ? Colors.main : Colors.gray2 }}>{label}</Text>

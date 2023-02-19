@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Image, ImageBackground, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, ImageBackground, View, StatusBar } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
 
 import { FontFamily, FontSize, Padding, Colors } from '@app/utils';
@@ -16,6 +16,7 @@ const plantImage = require('@app/assets/images/get-started/plant.png');
 const GetStartedScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <ImageBackground source={bgImage} resizeMode="cover" style={{ flex: 1 }}>
+      <StatusBar animated={true} barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
         <View style={styles.valueProp}>
           <View style={styles.title}>

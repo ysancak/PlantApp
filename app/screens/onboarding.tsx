@@ -20,7 +20,7 @@ export type Props = {
 const OnboardingScreen: React.FC<Props> = ({ navigation }) => {
   const [activeSlider, setActiveSlider] = useState<number>(0);
   return (
-    <ImageBackground source={bgImage} resizeMode="cover" style={{ flex: 1 }}>
+    <ImageBackground source={bgImage} resizeMode="cover" style={styles.bgImage}>
       <SafeAreaView style={styles.container}>
         <Carousel loop={false} style={{ flex: 1 }} width={windowWidth} autoPlay={true} data={sliderData} onSnapToItem={index => setActiveSlider(index)} scrollAnimationDuration={600} autoPlayInterval={3000} renderItem={({ index, item }) => item} />
         <LinearGradient colors={['#FFFFFF01', '#FFFFFF']} start={{ x: 0, y: 0 }} end={{ x: 0, y: 0.1 }} style={styles.bottomContainer}>
@@ -43,6 +43,10 @@ const OnboardingScreen: React.FC<Props> = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  bgImage: {
+    flex: 1,
+    backgroundColor: '#FFF'
   },
   titleContainer: {
     flexDirection: 'row',

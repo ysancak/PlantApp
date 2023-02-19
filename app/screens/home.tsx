@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, SafeAreaView, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { ImageBackground, SafeAreaView, ScrollView, StyleSheet, TextInput, View, StatusBar } from 'react-native';
 import { BlurView } from '@react-native-community/blur';
 
 import Typography from '@app/components/typography';
@@ -15,6 +15,7 @@ export type Props = {};
 const HomeScreen: React.FC<Props> = ({}) => {
   return (
     <View style={styles.container}>
+      <StatusBar animated={true} barStyle="dark-content" />
       <ImageBackground source={headerBgImage} style={styles.imageBg}>
         <SafeAreaView style={styles.headerContainer}>
           <View style={{ marginTop: 10, gap: 4 }}>
@@ -42,6 +43,7 @@ const HomeScreen: React.FC<Props> = ({}) => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#FBFAFA',
     flex: 1
   },
   headerContainer: {
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.regular
   },
   scrollViewContentContainer: {
+    backgroundColor: '#FBFAFA',
     paddingTop: 20,
     paddingBottom: 40,
     gap: 26

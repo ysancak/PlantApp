@@ -4,7 +4,7 @@
 
 _Screenshots were taken from the emulator after the project was finished_
 
-This project was completed as an interview case study for HubX company. The total time spent on this project was 30 working hours.
+This project was completed as an interview case study for HubX company. The total time spent on this project was 30-35 working hours.
 
 ## Installation
 
